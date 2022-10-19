@@ -4,5 +4,5 @@ function even_or_odd(x) {
 
 for (let i = 0; i < 500; i++) {
   const rand = parseInt(Math.random()*10000+1);
-  document.write(rand + " is " + even_or_odd(rand))
+  document.write(rand + " is " + even_or_odd(rand)+"<br>")
 }
