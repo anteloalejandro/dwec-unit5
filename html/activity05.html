@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map of arrays</title>
+  <script src="../js/activity05.js"></script>
+</head>
+<body>
+  <script>
+    let input
+    let arr = []
+    // Ask the user to input words
+    do {
+      input = prompt('Type a word')
+      if (!input) break
+      arr = arr.concat([input])
+    } while (true);
+    let map = array_to_map(arr)
+    // Print the results. 'word' will be an array
+    for (const word of map) {
+      document.write(word[0] + " -- " + word[1] + " veces <br>")
+    }
+  </script>
+</body>
+</html>
