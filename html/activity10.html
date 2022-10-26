@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array filter</title>
+  <script src="../js/activity10.js"> </script>
+  <script>
+    let varied_array = [
+      401, 2, 5,
+      '4', '1', '252',
+      'hi', 'world', 'js',
+      true, false,
+      [1,2,3], ['this', 'is', 'an', 'array']
+    ]
+  </script>
+</head>
+<body>
+  <h1>Array</h1>
+  <p>
+    <script>
+      print_arr(varied_array)
+    </script>
+  </p>
+  <hr>
+  <h2>Values of type 'number'</h2>
+  <p>
+    <script>
+      print_arr(filter(
+        varied_array,
+        // '+x' transforms 'x' into a number
+        x => x === +x
+      ))
+    </script>
+  </p>
+  <hr>
+  <h2>Strings with numeric values</h2>
+  <p>
+    <script>
+      print_arr(filter(
+        varied_array,
+        // 'x+""' transforms 'x' into a string
+        x => x+"" === x && !isNaN(+x)
+      ))
+    </script>
+  </p>
+  <hr>
+  <h2>Boolean values</h2>
+  <p>
+    <script>
+      print_arr(filter(
+        varied_array,
+        // '!!x' transforms 'x' into a boolean
+        x => x === !!x
+      ))
+    </script>
+  </p>
+  <hr>
+  <h2>Strings of a length greater than 4</h2>
+  <p>
+    <script>
+      print_arr(filter(
+        varied_array,
+        x => x+"" === x && x.length > 4
+      ))
+    </script>
+  </p>
+  <hr>
+  <h2>Arrays</h2>
+  <p>
+    <script>
+      print_arr(filter(
+        varied_array,
+        x => x instanceof Array
+      ))
+    </script>
+  </p>
+  <hr>
+  <h2>Values equal to both true and false</h2>
+  <small><em><strong>(Shouldn't exist)</strong></em></small>
+  <p>
+    <script>
+      print_arr(filter(
+        varied_array,
+        x => !x && !!x
+      ))
+    </script>
+  </p>
+</body>
+</html>
