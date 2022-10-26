@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anagrams</title>
+  <script src="../js/activity08.js"></script>
+</head>
+<body>
+  <script>
+    let input
+    let arr = []
+    // Ask the user to input words and add them to an array
+    do {
+      input = prompt('Type a word')
+      if (!input) break
+      arr = arr.concat([input])
+    } while(true)
+    // Convert the array into multiple arguments for the function
+    alert(isAnagram(...arr) ? 'They are palindromes' : 'They aren\'t palindromes')
+  </script>
+</body>
+</html>
