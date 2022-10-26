@@ -15,7 +15,7 @@
     do {
       input = prompt('Type a word')
       if (!input) break
-      arr = arr.concat([input])
+      arr.push(input)
     } while (true);
     let map = array_to_map(arr)
     // Print the results. 'word' will be an array
