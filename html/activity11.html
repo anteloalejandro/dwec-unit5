@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <script src="../js/activity11.js"></script>
+</head>
+<body>
+  <script>
+    alert('Minesweeper')
+    // +null == 0, +'' == 0
+    // 'size' and 'mines' will be 0 if the user doesn't input anything or presses cancel.
+    let size = parseInt(+prompt('Select the size of the board'))
+    let mines = parseInt(+prompt('Select the number of mines'))
+    // If the user typed a non-natural number for any of these two values, use the default values.
+    if (size <= 0 || mines <= 0)
+      minesweeper()
+    else
+      minesweeper(size, size, 16)
+  </script>
+</body>
+</html>
