@@ -17,7 +17,7 @@ function game_board(width, height, mines) {
     do {
       rand_x = parseInt(Math.random()*width)
       rand_y = parseInt(Math.random()*height)
-      // Retry if this tile already has a mine
+      // Retry if this tile already has a mine.
     } while (out[rand_y][rand_x] == -1)
     out[rand_y][rand_x] = -1
   }
@@ -32,7 +32,7 @@ function mines_around(board) {
   let height = board.length
   let width = board[0].length
 
-  // Run through the board
+  // Run through the board.
   for (let y = 0; y < height; y++) {
     for (let x= 0; x < width; x++) {
       // If this tile is a mine, run through all the adyacent tiles.
@@ -57,12 +57,12 @@ function mines_around(board) {
 }
 
 function minesweeper(width = 9, height = 9, mines = 16) {
-  // Get the full game board
+  // Get the full game board.
   let board = mines_around(game_board(width, height, mines))
   // If the board wasn't created succesfully, return false
   if (board === false) return false
 
-  // Styling for the table
+  // Styling for the table.
   document.write(
     '<style>'+
     '#minesweeper {border-collapse: collapse; font-family: monospace; text-align: center; font-size: 0.3em}'+
@@ -70,7 +70,7 @@ function minesweeper(width = 9, height = 9, mines = 16) {
     '</style>'
   )
 
-  // Special character to print instead of the corresponding number
+  // Special character to print instead of the corresponding number.
   let special_chars = new Map([
     [-1, 'MINE'], [0, '&nbsp;']
   ])
@@ -89,7 +89,7 @@ function minesweeper(width = 9, height = 9, mines = 16) {
   }
   table += "</table>"
 
-  // Draw table and return true
+  // Draw table and return true.
   document.write(table)
   return true
 }

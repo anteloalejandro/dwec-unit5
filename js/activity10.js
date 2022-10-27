@@ -1,10 +1,10 @@
 function filter(array, callback) {
-  // Create a new array to store the valid data
+  // Create a new array to store the valid data.
   let out = []
   // Run through the given array
   for (let i = 0; i < array.length; i++) {
     // Use a callback function to check if the value is valid,
-    // and store it in the new array if it is
+    // and store it in the new array if it is.
     if (callback(array[i]))
       out[out.length] = array[i]
   }
