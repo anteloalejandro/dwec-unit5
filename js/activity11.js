@@ -65,8 +65,8 @@ function minesweeper(width = 9, height = 9, mines = 16) {
   // Styling for the table.
   document.write(
     '<style>'+
-    '#minesweeper {border-collapse: collapse; font-family: monospace; text-align: center; font-size: 0.3em}'+
-    '#minesweeper td {border: 1px solid black; width: 5em; height: 5em}'+
+    '#minesweeper {border-collapse: collapse; font-family: monospace; text-align: center; font-size: 1em}'+
+    '#minesweeper td {border: 3px solid black; width: 5em; height: 5em}'+
     '</style>'
   )
 
