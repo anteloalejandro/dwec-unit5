@@ -18,9 +18,9 @@
       arr.push(input)
     } while (true);
     let map = array_to_map(arr)
-    // Print the results. 'word' will be an array
-    for (const word of map) {
-      document.write(word[0] + " -- " + word[1] + " veces <br>")
+    // Print the results.
+    for (const [word, count] of map) {
+      document.write(word + " -- " + count + " veces <br>")
     }
   </script>
 </body>
